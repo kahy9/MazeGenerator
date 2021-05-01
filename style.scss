@@ -1,0 +1,17 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.field {
+  background-color: rgb(255, 255, 173);
+  width: 600px;
+  height: 600px;
+}
