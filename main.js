@@ -12,10 +12,7 @@ let borderY = 0;
 let borderX = 0;
 let getTile = 1;
 
-let topDir = 1;
-let bottomDir = 1;
-let leftDir = 1;
-let rightDir = 1;
+let direction = 0;
 
 let arr = [];
 let arrBasis = [];
@@ -50,7 +47,7 @@ const drawGrid = () => {
                     tile: {
                         X: i,
                         Y: j,
-                        value: 0
+                        value: 1
                     }
                 });
             } else {
@@ -75,8 +72,13 @@ const drawGrid = () => {
 
 const drawInnerBorder = () => {
     const getRandomBasis = Math.floor(Math.random() * arrBasis.length);
+    getDirection();
     goTop(getRandomBasis);
     console.log(arrBasis);
+}
+
+const getDirection =  () => {
+    return Math.floor(Math.random() * 4);
 }
 
 const rectangle = (color, x, y, width, height) => {
